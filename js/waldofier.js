@@ -87,7 +87,7 @@ function placeUsers() {
 			x = getRandomInt(PLACEMENT_CANVAS.width - PLACEMENT_MARGIN) + PLACEMENT_MARGIN / 2;
 			y = getRandomInt(PLACEMENT_CANVAS.height - PLACEMENT_MARGIN) + PLACEMENT_MARGIN / 2;
 
-			var pixelData = context.getImageData(user.location.x, user.location.y, 1, 1).data;
+			var pixelData = context.getImageData(user.location.x, user.location.y, 1, 1);
 
 			if(pixelData.data[3] > 0) {
 				user.placed = false;
