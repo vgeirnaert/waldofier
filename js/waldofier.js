@@ -97,12 +97,11 @@ let users = [
 	},
 ]
 
-const IMAGE_SCALE = 1;
+const IMAGE_SCALE = 1.0;
 const AVATAR_IMAGE_WIDTH = 380;
 const AVATAR_IMAGE_HEIGHT = 487;
-const AVATAR_PLACEMENT_OFFSET = 40; 
-const PLACEMENT_MASK_WIDTH = (AVATAR_IMAGE_WIDTH - AVATAR_PLACEMENT_OFFSET) * IMAGE_SCALE;
-const PLACEMENT_MASK_HEIGHT = (AVATAR_IMAGE_HEIGHT - AVATAR_PLACEMENT_OFFSET) * IMAGE_SCALE;
+const PLACEMENT_MASK_WIDTH = AVATAR_IMAGE_WIDTH * IMAGE_SCALE;
+const PLACEMENT_MASK_HEIGHT = AVATAR_IMAGE_HEIGHT * IMAGE_SCALE;
 const PLACEMENT_MARGIN = 600;
 
 const PLACEMENT_CANVAS = document.createElement('canvas');
@@ -142,7 +141,7 @@ function placeUsers() {
 				user.location.x = x;
 				user.location.y = y;
 
-				context.clearRect(x - AVATAR_PLACEMENT_OFFSET, y - PLACEMENT_MASK_HEIGHT, PLACEMENT_MASK_WIDTH * 2, PLACEMENT_MASK_HEIGHT * 2);
+				context.clearRect(x - AVATAR_IMAGE_WIDTH * 0.8, y - PLACEMENT_MASK_HEIGHT * 0.8, PLACEMENT_MASK_WIDTH * 2, PLACEMENT_MASK_HEIGHT * 2);
 				break;
 			} else {
 				console.log("retrying");
