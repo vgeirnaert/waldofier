@@ -138,11 +138,11 @@ function placeUsers() {
 			var pixelData = context.getImageData(user.location.x, user.location.y, 1, 1);
 
 			if(pixelData.data[3] > 0) {
-				user.placed = false;
+				user.placed = true;
 				user.location.x = x;
 				user.location.y = y;
 
-				context.clearRect(x + AVATAR_PLACEMENT_OFFSET / 2, y, x + PLACEMENT_MASK_WIDTH * IMAGE_SCALE, y + PLACEMENT_MASK_HEIGHT * IMAGE_SCALE);
+				context.clearRect(x + AVATAR_PLACEMENT_OFFSET / 2, y, PLACEMENT_MASK_WIDTH * IMAGE_SCALE, PLACEMENT_MASK_HEIGHT * IMAGE_SCALE);
 				break;
 			} else {
 				console.log("retrying");
@@ -173,7 +173,7 @@ function draw() {
 
 			// draw users
 			users.forEach(user => {
-				if(user.location.x > 0 && user.location.y > 0) {
+				if(user.placed) {
 					var img = new Image();
 					img.addEventListener('load', function() {
 						ctx.drawImage(img, user.location.x, user.location.y, img.width * IMAGE_SCALE, img.height * IMAGE_SCALE);	
