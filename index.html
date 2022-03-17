@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Waldofier</title>
+
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/waldofier.css">
+</head>
+<body onload="waldofy();">
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container">
+		<div class="row">
+			<div class="twelve column" style="margin-top: 10%">
+				<h4>Waldofier</h4>
+				<p>Welcome to the beach!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve column">
+				<canvas id="waldofier" width="4612" height="3478">
+					
+				</canvas>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve column" style="margin-top: 15%">
+				<small>Waldofier. Powered by <a href="http://www.getskeleton.com">Skeleton</a>.
+			</div>
+		</div>
+	</div>
+
+<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script>
+	// this little scriptlet prevents mobile browsers from caching our JS
+	let script = document.createElement('script');
+	script.src='js/waldofier.js?time=' + (new Date().getTime());
+
+	document.getElementsByTagName('head')[0].appendChild(script);
+	</script>
+</body>
+</html>
+
+
