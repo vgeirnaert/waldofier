@@ -142,7 +142,7 @@ function placeUsers() {
 				user.location.x = x;
 				user.location.y = y;
 
-				context.clearRect(x + AVATAR_PLACEMENT_OFFSET / 2, y + AVATAR_PLACEMENT_OFFSET, x + PLACEMENT_MASK_WIDTH * IMAGE_SCALE, y + PLACEMENT_MASK_HEIGHT * IMAGE_SCALE);
+				context.clearRect(x + AVATAR_PLACEMENT_OFFSET / 2, y, x + PLACEMENT_MASK_WIDTH * IMAGE_SCALE, y + PLACEMENT_MASK_HEIGHT * IMAGE_SCALE);
 				break;
 			} else {
 				console.log("retrying");
