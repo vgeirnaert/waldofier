@@ -47,6 +47,54 @@ let users = [
 			y: 0
 		},
 	},
+	{
+		name: 'test7',
+		url: 'https://i.redd.it/snoovatar/avatars/31544b4e-e368-4b4c-bff7-e26219bd27a1.png',
+		location: {
+			x: 0,
+			y: 0
+		},
+	},
+	{
+		name: 'test8',
+		url: 'https://i.redd.it/snoovatar/avatars/4a264df9-ad75-4d18-aa5f-78176fb75ca1.png',
+		location: {
+			x: 0,
+			y: 0
+		},
+	},
+	{
+		name: 'test9',
+		url: 'https://i.redd.it/snoovatar/avatars/b21f11c7-f319-40d8-93dc-1fdf65b568eb.png',
+		location: {
+			x: 0,
+			y: 0
+		},
+	},
+	{
+		name: 'test10',
+		url: 'https://i.redd.it/snoovatar/avatars/31544b4e-e368-4b4c-bff7-e26219bd27a1.png',
+		location: {
+			x: 0,
+			y: 0
+		},
+	},
+	{
+		name: 'test11',
+		url: 'https://i.redd.it/snoovatar/avatars/4a264df9-ad75-4d18-aa5f-78176fb75ca1.png',
+		location: {
+			x: 0,
+			y: 0
+		},
+	},
+	{
+		name: 'test12',
+		url: 'https://i.redd.it/snoovatar/avatars/b21f11c7-f319-40d8-93dc-1fdf65b568eb.png',
+		location: {
+			x: 0,
+			y: 0
+		},
+	},
 ]
 
 const IMAGE_SCALE = 1;
@@ -55,7 +103,7 @@ const AVATAR_IMAGE_HEIGHT = 487;
 const AVATAR_PLACEMENT_OFFSET = 40; 
 const PLACEMENT_MASK_WIDTH = AVATAR_IMAGE_WIDTH - AVATAR_PLACEMENT_OFFSET;
 const PLACEMENT_MASK_HEIGHT = AVATAR_IMAGE_HEIGHT - AVATAR_PLACEMENT_OFFSET;
-const PLACEMENT_MARGIN = 200;
+const PLACEMENT_MARGIN = 600;
 
 const PLACEMENT_CANVAS = document.createElement('canvas');
 
@@ -70,7 +118,7 @@ function createPlacementCanvas() {
 
 		placeUsers();
 	});
-	placementMap.src = 'img/beach.png';
+	placementMap.src = 'img/mask.png';
 }
 
 function getRandomInt(max) {
